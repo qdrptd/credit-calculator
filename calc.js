@@ -34,4 +34,5 @@ function SetVar(e){
     const grade = parent.querySelector(".grade");
     tot.innerHTML = mid_s * mid_p / 100 + fin_s * fin_p / 100 + perf_s;
     grade.innerHTML = sc_to_gr(mid_s * mid_p / 100 + fin_s * fin_p / 100 + perf_s);
+    update_credit();
 }

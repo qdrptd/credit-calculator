@@ -1,7 +1,5 @@
-console.log(Object.keys(data).sort());
-
 subject = Object.keys(data).sort();
-for(let o = 0; o <= 9; o++){
+for(let o = 0; o <= 15; o++){
     document.write("<tr>");
     
     document.write("<td>");
