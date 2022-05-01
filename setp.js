@@ -28,9 +28,9 @@ function gr_to_cr(gr){
     }
 }
 function update_p(e){
-    const this_name = e.path[0].value;
     const parent = e.target.parentNode.parentNode;
     
+    const this_name = parent.querySelector(".name").value;
     const num_node = parent.querySelector(".num");
     const midp_node = parent.querySelector(".mid_p");
     const finp_node = parent.querySelector(".fin_p");
