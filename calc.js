@@ -25,14 +25,15 @@ for(let i = 0; i < mid_score_collect.length; i++){
 
 function SetVar(e){
     parent = e.target.parentNode.parentNode;
-    const mid_s = parseInt(parent.querySelector(".mid_s").value) || 0;
-    const mid_p = parseInt(parent.querySelector(".mid_p").innerHTML) || 0;
-    const fin_s = parseInt(parent.querySelector(".fin_s").value) || 0;
-    const fin_p = parseInt(parent.querySelector(".fin_p").innerHTML) || 0;
-    const perf_s = parseInt(parent.querySelector(".perf_s").value) || 0;
+    const mid_s = parseFloat(parent.querySelector(".mid_s").value) || 0;
+    const mid_p = parseFloat(parent.querySelector(".mid_p").innerHTML) || 0;
+    const fin_s = parseFloat(parent.querySelector(".fin_s").value) || 0;
+    const fin_p = parseFloat(parent.querySelector(".fin_p").innerHTML) || 0;
+    const perf_s = parseFloat(parent.querySelector(".perf_s").value) || 0;
     const tot = parent.querySelector(".tot_s");
     const grade = parent.querySelector(".grade");
-    tot.innerHTML = mid_s * mid_p / 100 + fin_s * fin_p / 100 + perf_s;
-    grade.innerHTML = sc_to_gr(mid_s * mid_p / 100 + fin_s * fin_p / 100 + perf_s);
+    won_score = (mid_s * mid_p / 100 + fin_s * fin_p / 100 + perf_s).toFixed(2);
+    tot.innerHTML = won_score;
+    grade.innerHTML = sc_to_gr(won_score);
     update_credit();
 }

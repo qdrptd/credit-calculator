@@ -54,5 +54,6 @@ function update_credit(){
     }
     console.log(c, total_time);
     grade_node = document.querySelector("#credit");
-    grade_node.innerHTML = "당신의 학점은 " +String(c / total_time)+" 입니다.";
+    cr = (c / total_time) || 0;
+    grade_node.innerHTML = "당신의 학점은 " +String(cr.toFixed(2))+" 입니다.";
 }
