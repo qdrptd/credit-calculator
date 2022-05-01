@@ -25,6 +25,8 @@ for(let i = 0; i < mid_score_collect.length; i++){
 
 function SetVar(e){
     parent = e.target.parentNode.parentNode;
+    console.log(parent);
+    const subj = parent.querySelector(".name").value;
     const mid_s = parseFloat(parent.querySelector(".mid_s").value) || 0;
     const mid_p = parseFloat(parent.querySelector(".mid_p").innerHTML) || 0;
     const fin_s = parseFloat(parent.querySelector(".fin_s").value) || 0;
@@ -34,6 +36,11 @@ function SetVar(e){
     const grade = parent.querySelector(".grade");
     won_score = (mid_s * mid_p / 100 + fin_s * fin_p / 100 + perf_s).toFixed(2);
     tot.innerHTML = won_score;
-    grade.innerHTML = sc_to_gr(won_score);
+    if(!data[subj][4]){
+        grade.innerHTML = sc_to_gr(won_score);
+    }
+    else{
+        grade.innerHTML = won_score >= 80 ? "P": "F";
+    }
     update_credit();
 }
