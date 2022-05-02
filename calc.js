@@ -8,6 +8,9 @@ function sc_to_gr(score){
     if(score >= 60){return 'C+';}
     if(score >= 55){return 'C0';}
     if(score >= 50){return 'C-';}
+    if(score >= 45){return 'D+';}
+    if(score >= 40){return 'D0';}
+    if(score >= 35){return 'D-';}
     else{return 'F';}
 }
 
@@ -40,7 +43,7 @@ function SetVar(e){
         grade.innerHTML = sc_to_gr(won_score);
     }
     else{
-        grade.innerHTML = won_score >= 80 ? "P": "F";
+        grade.innerHTML = won_score >= 60 ? "P": "F";
     }
     update_credit();
 }

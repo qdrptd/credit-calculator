@@ -23,6 +23,12 @@ function gr_to_cr(gr){
         return 2.0;
         case 'C-':
         return 1.7;
+        case 'D+':
+        return 1.3;
+        case 'D0':
+        return 1.0;
+        case 'D-':
+        return 0.7;
         default:
         return 0;
     }
